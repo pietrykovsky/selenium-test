@@ -14,7 +14,8 @@ def generate_text():
     text = ''.join(random.choices(string.ascii_letters, k=random.randrange(250, 401)))
     return text
 
-def test_scenario():
+def test_expected_price_and_time_presence():
+    """Test expected price and realization time precence."""
     service = Service(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
 
@@ -52,4 +53,4 @@ def test_scenario():
     driver.close()
 
 if __name__ == '__main__':
-    test_scenario()
+    test_expected_price_and_time_presence()
